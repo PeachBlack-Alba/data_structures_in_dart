@@ -26,17 +26,19 @@ class HighArrayTask1  extends HighArray{
      return -1;
    }
    int max = a[0];
-   for (var i = 0; i < nElems; i++){
-    max = a[i];
+   for ( int i = 0; i < nElems; i++) {
+     if (a[i] > max) {
+       max = a[i];
+     }
    }
-  // print("Largest value in the list : $max");
+   return max;
   }
 }
 
 void main() {
-  HighArrayTask1 array;
-  setUp(() {
-    array = new HighArrayTask1(10);
+  int maxSize = 10; //
+  HighArrayTask1 array = new HighArrayTask1(maxSize);
+// array size
 
     array.insert(10);
     array.insert(44);
@@ -48,11 +50,8 @@ void main() {
     array.insert(2);
     array.insert(66);
     array.insert(3);
-  });
-
 
   // Display items
   array.display();
   stdout.writeln("Largest value in the list :  ${array.getMax()}");
-
 }
