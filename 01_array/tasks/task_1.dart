@@ -3,7 +3,6 @@
 /// You can assume all the keys are positive numbers.
 
 import 'dart:io';
-
 import '../high_array.dart';
 
 class HighArrayTask1 extends HighArray {
@@ -23,7 +22,7 @@ class HighArrayTask1 extends HighArray {
         max = a[i];
       }
     }
-    return max;
+    return 0;
   }
 }
 

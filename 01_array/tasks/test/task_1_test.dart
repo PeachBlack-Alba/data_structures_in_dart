@@ -1,6 +1,37 @@
+import 'dart:io';
 import 'package:test/test.dart';
+import '../../high_array.dart';
 
-import '../task_1.dart';
+
+
+/// To the HighArray class in the `high_array.dart` program
+/// add a method called `getMax()` that returns the value of the highest key in the array, or –1 if the array is empty.
+/// You can assume all the keys are positive numbers.
+
+
+
+class HighArrayTask1  extends HighArray{
+
+  /// Inheritance tha super class
+  HighArrayTask1(int max)
+      : super(max);
+
+
+  List<int> a; // ref to array a
+  int nElems; // number of data items
+
+
+  int getMax (){
+   if (nElems == 0){
+     return -1;
+   }
+   int max = a[0];
+   for (var i = 0; i < nElems; i++){
+    max = a[i];
+   }
+  // print("Largest value in the list : $max");
+  }
+}
 
 void main() {
   HighArrayTask1 array;
@@ -18,10 +49,10 @@ void main() {
     array.insert(66);
     array.insert(3);
   });
-  
-  group('HightArrayTask1', () {
-    test('.getMax() return max element of array', () {
-      expect(array.getMax(), equals(99));
-    });
-  });
+
+
+  // Display items
+  array.display();
+  stdout.writeln("Largest value in the list :  ${array.getMax()}");
+
 }
