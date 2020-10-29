@@ -6,20 +6,18 @@
 /// overwrite any duplicates with a null (or a distinctive value that isn’t used for real keys).
 /// Then remove all the nulls. Of course, the array size will be reduced.
 
-
 import 'dart:io';
 
 import '../high_array.dart';
 
 class HighArrayTask6 extends HighArray {
+  HighArrayTask6(int max) : super(max);
 
-  HighArrayTask6(int max)
-      : super(max);
-
+  // deleting all whitespaces in the array because noDups delete the value but not the index
   @override
   String toString() {
     String string = '';
-    for(int j = 0; j < nElems; j++) {
+    for (int j = 0; j < nElems; j++) {
       string += '${a[j]} ';
     }
     return string.trim();
@@ -27,24 +25,23 @@ class HighArrayTask6 extends HighArray {
 
   void noDups() {
     int size = nElems - 1;
-    int value = null;
+      int value = null;
 
-    for(int i = 0; i <= size; i ++) {
+    for (int i = 0; i <= size; i++) {
       value = a[i];
-      for (int j = i + 1; j <= size; j ++) {
+      for (int j = i + 1; j <= size; j++) {
         if (a[j] == value) {
-          for(int k = j; k < size; k ++) {
+          for (int k = j; k < size; k++) {
             a[k] = a[k + 1];
           }
-          nElems --;
-          j --;
-          size --;
+          nElems--;
+          j--;
+          size--;
         }
       }
     }
   }
 }
-
 
 void main() {
   int maxArraySize = 10;

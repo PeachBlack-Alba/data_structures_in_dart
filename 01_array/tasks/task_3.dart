@@ -25,6 +25,7 @@ class HighArrayTask3 extends HighArray {
 
     for(int k = maxIndex; k < nElems - 1; k ++) {
       a[k] = a[k + 1];
+      //print(a[k]);
     }
     nElems --;
 
@@ -56,6 +57,7 @@ void main() {
   HighArray orderedArray = new HighArray(maxSize);
   for(int i = 0; i < length; i++) {
     int item = array.removeMax();
+   array.display();
     orderedArray.insert(item);
   }
 

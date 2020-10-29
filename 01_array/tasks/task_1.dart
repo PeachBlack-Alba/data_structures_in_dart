@@ -21,8 +21,8 @@ class HighArrayTask1 extends HighArray {
       if(a[i] > max) {
         max = a[i];
       }
-    }
-    return 0;
+    } // He was returning 0 instead of the max. Don't understand why, so the max value was always 0.
+    return max;
   }
 }
 
@@ -36,9 +36,9 @@ void main() {
   array.insert(99);
   array.insert(44);
   array.insert(55);
-  array.insert(22);
-  array.insert(88);
-  array.insert(11);
+  array.insert(-22);
+  array.insert(-14);
+  array.insert(-78);
   array.insert(00);
   array.insert(66);
   array.insert(33);

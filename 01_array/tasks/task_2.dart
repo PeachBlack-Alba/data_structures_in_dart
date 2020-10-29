@@ -34,7 +34,7 @@ class HighArrayTask2 extends HighArray {
 
 void main() {
   int maxSize = 10; // array size
-  HighArrayTask2 array = new HighArrayTask2(maxSize);
+  HighArrayTask2 array = new  HighArrayTask2(maxSize);
 
   // Insert 10 items
   array.insert(77);

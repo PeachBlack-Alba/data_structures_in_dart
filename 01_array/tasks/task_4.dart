@@ -6,8 +6,7 @@ import 'dart:io';
 import '../ordered_array.dart';
 
 class OrderedArrayTask4 extends OrderedArray {
-  List<int> a;
-  int nElems;
+
 
   // Constructor
   OrderedArrayTask4(int max)
@@ -15,7 +14,7 @@ class OrderedArrayTask4 extends OrderedArray {
 
   /// Put element into ordered array using Binary Search
   @override
-  void insert(int value) {
+   insert(int value) {
     int lowerBound = 0;
     int upperBound = nElems - 1;
     int j = 0;
@@ -74,4 +73,6 @@ void main() {
 
   // Display items
   array.display();
+  //stdout.writeln("this is what insert does:  ${array.insert()}");
+
 }

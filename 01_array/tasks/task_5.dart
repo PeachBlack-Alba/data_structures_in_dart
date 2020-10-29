@@ -9,8 +9,9 @@
 
 import 'dart:io';
 import 'dart:math';
-
 import '../ordered_array.dart';
+
+
 
 class OrderedArrayTask5 extends OrderedArray {
 
@@ -60,7 +61,7 @@ class OrderedArrayTask5 extends OrderedArray {
       i ++;
     }
     return destination;
-  }
+  }// position 9 returns null in both arrays (1&2), arr3 has 18 elements
 }
 
 void main() {
